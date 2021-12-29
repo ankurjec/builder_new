@@ -121,12 +121,16 @@ export default (editor, config) => {
   {
     id: customButton,
     command: customButton,
-    className: 'fa fa-check',
-  },
-]);
+    // className: 'fa fa-check',
+    
+    label: '<button class="btn btn-sm btn-danger">Save <i class="fa fa-check" style="font-size:12px" aria-hidden="true"></i></button>',
+    command: function(editor1, sender) { alert('Hello World') }, attributes: { title: 'Save Template' } }, ]);
+  
 
-  const openBl = pn.getButton('views', obl);
-  editor.on('load', () => openBl && openBl.set('active', 1));
+
+// command: function(editor1, sender) { alert('Hello World') }, attributes: { title: 'Save Template' } }, ]);
+//   const openBl = pn.getButton('views', obl);
+//   editor.on('load', () => openBl && openBl.set('active', 1));
 
   // On component change show the Style Manager
   config.showStylesOnChange && editor.on('component:selected', () => {
