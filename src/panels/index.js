@@ -124,7 +124,7 @@ export default (editor, config) => {
     // className: 'fa fa-check',
     
     label: '<button class="btn btn-sm btn-danger">Save <i class="fa fa-check" style="font-size:12px" aria-hidden="true"></i></button>',
-    command: function(editor1, sender) { alert('Hello World') }, attributes: { title: 'Save Template' } }, ]);
+    command: function(editor1, sender) { console.log(editor1.getHtml(),editor1.getCss()); }, attributes: { title: 'Save Template' } }, ]);
   
 
 
